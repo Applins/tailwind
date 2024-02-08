@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Student Logs</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico" />
+    <form class="container mx-auto max-w-lg">
+      <select
+        aria-label="Select Course"
+        class="form-select block w-full mt-1"
+        id="course"
+        name="course"
+        data-cy="course_select"
+      >
+        <option selected value="">Choose Courses</option></select
+      ><br />
+      <label for="uvuId" class="block">UVU ID</label><br />
+      <input
+        type="text"
+        id="uvuId"
+        name="uvuId"
+        data-cy="uvuId_input"
+        maxlength="8"
+        style="display: none"
+        class="hidden"
+      />
+      <div class="mt-4">
+        <h3 id="uvuIdDisplay" data-cy="uvuIdDisplay">Student Logs</h3>
+        <ul class="list-none" data-cy="logs" id="logs"></ul>
+      </div>
+
+      <label class="block mt-4">New Log</label><br />
+      <textarea
+        style="height: 75px"
+        class="form-textarea block w-full"
+        aria-label="add log textarea"
+        data-cy="log_textarea"
+      ></textarea
+      ><br />
+      <button
+        class="btn btn-primary disabled:opacity-50 mt-4"
+        type="submit"
+        data-cy="add_log_btn"
+        disabled
+      >
+        Add Log
+      </button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

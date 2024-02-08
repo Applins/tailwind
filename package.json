@@ -1,0 +1,16 @@
+{
+  "name": "node-starter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "server": "json-server db.json --routes routes.json"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.4",
+    "json-server": "0.17.0"
+  },
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "jquery": "^3.7.1"
+  }
+}
